@@ -29,6 +29,7 @@ Configuration Options
 - __opts.bpm__ integer - beats per minute
 - __opts.swing__ float - a value between 0 and 1 representing the amount of "swing" in the beat
 - __opts.lookahead__ float - number of seconds (typically a fraction thereof) to look ahead for not events
+- __opts.ee-- event emitter - an event emitter with `on` and `emit` methods for use communicating with the scheduler; beat-scheduler uses nee internally
 
 Methods
 -------

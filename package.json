@@ -6,7 +6,10 @@
   "scripts": {
     "test": "gulp test"
   },
-  "author": "Joe Lepper",
+   "repository": {
+    "type": "git",
+    "url": "http://github.com/joeLepper/beat-scheduler.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "browserify": "^8.1.1",
@@ -24,5 +27,16 @@
   },
   "dependencies": {
     "nee": "^1.1.0"
-  }
+  },
+  "author": {
+    "name": "Joe Lepper",
+    "email": "josephlepper@gmail.com",
+    "url": "http://joelepper.com"
+  },
+  "keywords": [
+    "audio",
+    "beat",
+    "clock",
+    "metronome"
+  ]
 }
