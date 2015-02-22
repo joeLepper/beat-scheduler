@@ -1,8 +1,7 @@
-module.exports = function (ac, ee, opts) {
+module.exports = function (ac, opts) {
   var bpm
     , oneMinute = 60
     , playback = false
-    , numberOfBeats
     , beatLength
     , lastBeat
     , offset
@@ -10,10 +9,10 @@ module.exports = function (ac, ee, opts) {
     , rush = false
     , lookahead
 
+  ee = opts.ee || require('nee')()
   opts = opts || {}
-  numberOfBeats = opts.beats || 16
   bpm = opts.bpm || 120
-  swingPercent = opts.sinwg || 1 // int from 0 - 1
+  swingPercent = opts.swing || 1 // int from 0 - 1
   lookahead = opts.lookahead || 0.100
 
   ee.on('schedule-play', play)
@@ -26,6 +25,7 @@ module.exports = function (ac, ee, opts) {
     , stop: stop
     , changeBpm: changeBpm
     , changeSwing: changeSwing
+    , on: ee.on
     }
   )
 
